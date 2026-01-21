@@ -54,7 +54,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
               <a 
                 key={link.name} 
                 href={link.href}
-                className="font-orbitron text-sm uppercase tracking-widest hover:text-red-600 transition-colors"
+                className="font-orbitron text-sm uppercase tracking-widest hover:text-red-600 transition-all duration-300 nav-link-3d relative"
               >
                 {link.name}
               </a>

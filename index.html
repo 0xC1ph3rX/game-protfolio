@@ -58,6 +58,168 @@
         animation: particle linear infinite;
       }
 
+      /* Neon Pulse Animation for Photo Glow */
+      @keyframes neonPulse {
+        0%, 100% { 
+          opacity: 0.6;
+          transform: scale(1);
+        }
+        50% { 
+          opacity: 0.9;
+          transform: scale(1.05);
+        }
+      }
+
+      /* Glitch Effect for Optional Enhancement */
+      @keyframes glitch {
+        0% { transform: translate(0); }
+        20% { transform: translate(-2px, 2px); }
+        40% { transform: translate(-2px, -2px); }
+        60% { transform: translate(2px, 2px); }
+        80% { transform: translate(2px, -2px); }
+        100% { transform: translate(0); }
+      }
+
+      /* Animated Button Borders */
+      .neon-button {
+        overflow: visible !important;
+      }
+
+      .neon-button:hover {
+        box-shadow: 0 0 5px #ff1e00, 0 0 25px #ff1e00, 0 0 50px #ff1e00, 0 0 100px #ff1e00;
+      }
+
+      .border-animate {
+        position: absolute;
+        display: block;
+      }
+
+      .border-animate-1 {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #ff1e00);
+        animation: borderAnimate1 1s linear infinite;
+      }
+
+      @keyframes borderAnimate1 {
+        0% { left: -100%; }
+        50%, 100% { left: 100%; }
+      }
+
+      .border-animate-2 {
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, #ff6b00);
+        animation: borderAnimate2 1s linear infinite;
+        animation-delay: 0.25s;
+      }
+
+      @keyframes borderAnimate2 {
+        0% { top: -100%; }
+        50%, 100% { top: 100%; }
+      }
+
+      .border-animate-3 {
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, #ff1e00);
+        animation: borderAnimate3 1s linear infinite;
+        animation-delay: 0.5s;
+      }
+
+      @keyframes borderAnimate3 {
+        0% { right: -100%; }
+        50%, 100% { right: 100%; }
+      }
+
+      .border-animate-4 {
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, #ff6b00);
+        animation: borderAnimate4 1s linear infinite;
+        animation-delay: 0.75s;
+      }
+
+      @keyframes borderAnimate4 {
+        0% { bottom: -100%; }
+        50%, 100% { bottom: 100%; }
+      }
+
+      /* 3D Gaming Navigation Links */
+      .nav-link-3d {
+        transform-style: preserve-3d;
+        transition: all 0.3s ease;
+        perspective: 1000px;
+      }
+
+      .nav-link-3d::before {
+        content: attr(href);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #ff1e00;
+        transform: translateZ(-10px);
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+
+      .nav-link-3d:hover {
+        transform: translateY(-5px) rotateX(10deg) translateZ(20px);
+        text-shadow: 
+          0 0 10px #ff1e00,
+          0 0 20px #ff1e00,
+          0 0 30px #ff1e00,
+          0 5px 10px rgba(0, 0, 0, 0.5);
+        filter: drop-shadow(0 10px 20px rgba(255, 30, 0, 0.5));
+      }
+
+      .nav-link-3d:hover::before {
+        opacity: 0.3;
+        transform: translateZ(-5px) translateY(2px);
+      }
+
+      .nav-link-3d::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #ff1e00, #ff6b00, #ff1e00, transparent);
+        transform: translateX(-50%);
+        transition: width 0.3s ease;
+        box-shadow: 0 0 10px #ff1e00;
+      }
+
+      .nav-link-3d:hover::after {
+        width: 120%;
+        animation: pulseGlow 1s ease-in-out infinite;
+      }
+
+      @keyframes pulseGlow {
+        0%, 100% {
+          box-shadow: 0 0 10px #ff1e00, 0 0 20px #ff1e00;
+        }
+        50% {
+          box-shadow: 0 0 20px #ff1e00, 0 0 40px #ff1e00;
+        }
+      }
+
+      /* Smooth scroll behavior */
+      html {
+        scroll-behavior: smooth;
+      }
+
       ::-webkit-scrollbar {
         width: 8px;
       }
@@ -65,8 +227,11 @@
         background: #0a0a0a;
       }
       ::-webkit-scrollbar-thumb {
-        background: #ff1e00;
+        background: linear-gradient(180deg, #ff1e00, #ff6b00);
         border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #ff4500, #ff8c00);
       }
     </style>
   <script type="importmap">
