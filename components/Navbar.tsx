@@ -12,7 +12,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
     { name: 'Home', href: '#' },
     { name: 'About', href: '#' },
     { name: 'Work', href: '#' },
-    { name: 'Contact', href: '#' },
+    { name: 'Contact', href: '#contact' }
   ];
 
   return (
@@ -31,7 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
 
         {/* Center: Hexagon Logo */}
         <div className="flex-none relative">
-          <div className="w-16 h-18 bg-red-600 clip-path-hexagon flex items-center justify-center red-glow hover:scale-110 transition-transform cursor-pointer">
+          <div className="w-16 h-18 bg-red-600 clip-path-hexagon flex items-center justify-center red-glow hover:scale-110 transition-transform cursor-pointer cursor-target">
             <svg 
               viewBox="0 0 24 24" 
               className="w-8 h-8 text-black" 
@@ -54,7 +54,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
               <a 
                 key={link.name} 
                 href={link.href}
-                className="font-orbitron text-sm uppercase tracking-widest hover:text-red-600 transition-all duration-300 nav-link-3d relative"
+                className="font-orbitron text-sm uppercase tracking-widest hover:text-red-600 transition-all duration-300 nav-link-3d relative cursor-target"
               >
                 {link.name}
               </a>
@@ -62,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
           </div>
 
           <button 
-            className="md:hidden text-white"
+            className="md:hidden text-white cursor-target"
             onClick={() => setIsOpen(!isOpen)}
           >
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,7 +78,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
             <a 
               key={link.name} 
               href={link.href}
-              className="font-orbitron text-xl uppercase tracking-widest hover:text-red-600 transition-colors"
+              className="font-orbitron text-xl uppercase tracking-widest hover:text-red-600 transition-colors cursor-target"
               onClick={() => setIsOpen(false)}
             >
               {link.name}

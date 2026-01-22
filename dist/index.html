@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STUDIO SHODWE | CREATIVE DESIGNER</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #000;
+        color: #fff;
+        margin: 0;
+        font-family: 'Rajdhani', sans-serif;
+        overflow-x: hidden;
+      }
+      .font-orbitron {
+        font-family: 'Orbitron', sans-serif;
+      }
+      .red-glow {
+        box-shadow: 0 0 30px rgba(255, 30, 0, 0.4);
+      }
+      .text-red-glow {
+        text-shadow: 0 0 15px rgba(255, 30, 0, 0.8);
+      }
+      .red-border-glow {
+        border-color: #ff1e00;
+        box-shadow: 0 0 15px #ff1e00;
+      }
+      .character-glow {
+        filter: drop-shadow(0 0 25px rgba(255, 60, 0, 0.6));
+      }
+      .bg-red-gradient {
+        background: radial-gradient(circle at center, rgba(255, 30, 0, 0.15) 0%, transparent 70%);
+      }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-15px) rotate(1deg); }
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes particle {
+        0% { transform: translateY(0) translateX(0); opacity: 0; }
+        50% { opacity: 0.8; }
+        100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
+      }
+      .particle {
+        position: absolute;
+        background: #ff4500;
+        border-radius: 50%;
+        pointer-events: none;
+        animation: particle linear infinite;
+      }
+
+      /* Neon Pulse Animation for Photo Glow */
+      @keyframes neonPulse {
+        0%, 100% { 
+          opacity: 0.6;
+          transform: scale(1);
+        }
+        50% { 
+          opacity: 0.9;
+          transform: scale(1.05);
+        }
+      }
+
+      /* Glitch Effect for Optional Enhancement */
+      @keyframes glitch {
+        0% { transform: translate(0); }
+        20% { transform: translate(-2px, 2px); }
+        40% { transform: translate(-2px, -2px); }
+        60% { transform: translate(2px, 2px); }
+        80% { transform: translate(2px, -2px); }
+        100% { transform: translate(0); }
+      }
+
+      /* Smooth scroll behavior */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a0a0a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #ff1e00, #ff6b00);
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #ff4500, #ff8c00);
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-C6G8rFBy.js"></script>
+</head>
+  <body>
+    <div id="root"></div>
+</body>
+</html>

@@ -199,23 +199,37 @@ const Hero: React.FC = () => {
 
         {/* Title Text */}
         <motion.div 
-          className="mb-4"
+          className="mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <h1 className="font-orbitron text-4xl md:text-7xl font-black text-white leading-tight uppercase">
-            <span className="inline-block mr-3">🎮</span>
+          <div className="flex items-center justify-center gap-3 text-red-500 text-xs md:text-sm tracking-[0.6em] font-orbitron uppercase mb-3">
+            <span className="w-8 h-px bg-red-600"></span>
+            SYSTEM READY
+            <span className="w-8 h-px bg-red-600"></span>
+          </div>
+          <h1 className="font-orbitron text-4xl md:text-7xl font-black text-white leading-tight uppercase title-3d">
+            <span className="inline-flex mr-3 items-center justify-center game-icon">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="7" width="20" height="10" rx="3" />
+                <path d="M6 12h4" />
+                <path d="M8 10v4" />
+                <circle cx="17" cy="11" r="1" />
+                <circle cx="19" cy="13" r="1" />
+              </svg>
+            </span>
             <span className="relative inline-block">
               GAMING DESIGNER
-              <div className="absolute -inset-2 blur-2xl bg-gradient-to-r from-red-600 to-orange-600 opacity-50 -z-10"></div>
+              <span className="absolute -inset-2 blur-2xl bg-gradient-to-r from-red-600 to-orange-600 opacity-60 -z-10"></span>
+              <span className="neon-sweep"></span>
             </span>
           </h1>
         </motion.div>
 
         {/* Subtitle */}
         <motion.h2 
-          className="font-orbitron text-red-500 text-sm md:text-xl tracking-wide mb-12 uppercase max-w-2xl"
+          className="font-orbitron text-red-500 text-sm md:text-xl tracking-wide mb-12 uppercase max-w-2xl text-red-glow"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
@@ -231,7 +245,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.7 }}
         >
           <motion.button 
-            className="group relative px-12 py-4 overflow-hidden rounded-full border-2 border-red-600 bg-red-600 hover:bg-transparent transition-all duration-500 neon-button"
+            className="group relative px-12 py-4 overflow-hidden rounded-full border-2 border-red-600 bg-red-600 hover:bg-transparent transition-all duration-500 neon-button cursor-target"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -245,7 +259,7 @@ const Hero: React.FC = () => {
           </motion.button>
 
           <motion.button 
-            className="group relative px-12 py-4 overflow-hidden rounded-full border-2 border-orange-600 bg-transparent hover:bg-orange-600 transition-all duration-500 neon-button"
+            className="group relative px-12 py-4 overflow-hidden rounded-full border-2 border-orange-600 bg-transparent hover:bg-orange-600 transition-all duration-500 neon-button cursor-target"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

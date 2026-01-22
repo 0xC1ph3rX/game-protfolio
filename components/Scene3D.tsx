@@ -73,7 +73,7 @@ function Scene({ numStars = 100 }) {
 
 export default function Scene3D() {
   return (
-    <div className="absolute inset-0 rounded-full overflow-hidden opacity-30">
+    <div className="absolute inset-0 rounded-full overflow-hidden opacity-30 webgl-only">
       <Canvas gl={{ antialias: false, alpha: true }} style={{ background: 'transparent' }}>
         <Scene />
       </Canvas>
